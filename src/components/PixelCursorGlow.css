@@ -1,0 +1,30 @@
+.pixel-cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  width: 220px;
+  height: 220px;
+  margin: -110px 0 0 -110px;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    circle,
+    rgba(140, 160, 255, .17) 0%,
+    rgba(140, 160, 255, .06) 45%,
+    rgba(140, 160, 255, 0) 62%
+  );
+  mix-blend-mode: screen;
+  transition: opacity .45s ease;
+  will-change: transform;
+}
+
+.pixel-cursor-glow.on {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-cursor-glow {
+    display: none;
+  }
+}

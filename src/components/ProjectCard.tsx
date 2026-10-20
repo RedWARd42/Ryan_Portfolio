@@ -13,7 +13,7 @@ function ProjectCard({ entryKey, title, proof, onSelect }: ProjectCardProps) {
       className="project"
       type="button"
       data-entry={entryKey}
-      data-cursor="View project"
+      data-cursor={`View ${title}`}
       onClick={(event) => onSelect(entryKey, event.currentTarget)}
     >
       <span className="project-title">{title}</span>

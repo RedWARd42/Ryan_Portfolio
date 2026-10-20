@@ -24,7 +24,7 @@ function ExperienceCard({
       className="role"
       type="button"
       data-entry={entryKey}
-      data-cursor="View experience"
+      data-cursor={`View ${company}`}
       onClick={(event) => onSelect(entryKey, event.currentTarget)}
     >
       <span className="role-top">

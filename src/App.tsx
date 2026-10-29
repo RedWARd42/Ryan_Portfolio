@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AboutSection from './components/AboutSection'
 import ContactSection from './components/ContactSection'
 import DetailPanel from './components/DetailPanel'
 import ExperienceSection from './components/ExperienceSection'
@@ -40,6 +41,7 @@ function App() {
       <div className="shell">
         <main>
           <Hero />
+          <AboutSection />
           <ProjectSection onSelect={openEntry} />
           <ExperienceSection onSelect={openEntry} />
           <ContactSection />

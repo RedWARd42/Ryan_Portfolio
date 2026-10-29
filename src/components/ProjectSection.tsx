@@ -32,7 +32,7 @@ function ProjectSection({ onSelect }: ProjectSectionProps) {
   return (
     <section className="content-section" id="work" aria-labelledby="work-title">
       <div className="section-head">
-        <h2 id="work-title">Selected work</h2>
+        <h2 id="work-title">Projects</h2>
       </div>
       <div className="project-grid">
         {projects.map((project) => (

@@ -616,8 +616,6 @@
     .experience-lead {
       top: 48px;
     }
-
-
     .role {
       position: relative;
       grid-template-columns: minmax(165px, .78fr) minmax(260px, 1.2fr) 32px;
@@ -1694,5 +1692,151 @@
     .role,
     .social-link {
       border: 0 !important;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr);
+      align-items: stretch;
+      gap: clamp(14px, 2vw, 24px);
+    }
+
+    .about-photo {
+      display: flex;
+      margin: 0;
+      padding: 14px;
+      background:
+        linear-gradient(112deg, var(--glass-bright) 0%, var(--glass-mid) 34%, var(--glass-deep) 68%, rgba(244, 247, 255, .13) 100%),
+        var(--translucent-gray);
+      -webkit-backdrop-filter: blur(8px) saturate(118%);
+      backdrop-filter: blur(8px) saturate(118%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .26),
+        inset 3px 3px 0 color-mix(in srgb, var(--glass-edge) 88%, transparent),
+        inset 6px 6px 10px rgba(255, 255, 255, .06),
+        inset -3px -3px 0 var(--glass-depth),
+        inset -9px -9px 14px rgba(0, 0, 8, .5),
+        inset 0 0 32px rgba(255, 255, 255, .028);
+    }
+
+    .about-photo svg,
+    .about-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .about-side {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(14px, 2vw, 24px);
+      min-width: 0;
+    }
+
+    .about-copy {
+      flex: 1;
+      padding: clamp(24px, 3vw, 36px);
+      background:
+        linear-gradient(112deg, var(--glass-bright) 0%, var(--glass-mid) 34%, var(--glass-deep) 68%, rgba(244, 247, 255, .13) 100%),
+        var(--translucent-gray);
+      -webkit-backdrop-filter: blur(8px) saturate(118%);
+      backdrop-filter: blur(8px) saturate(118%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .26),
+        inset 3px 3px 0 color-mix(in srgb, var(--glass-edge) 88%, transparent),
+        inset 6px 6px 10px rgba(255, 255, 255, .06),
+        inset -3px -3px 0 var(--glass-depth),
+        inset -9px -9px 14px rgba(0, 0, 8, .5),
+        inset 0 0 32px rgba(255, 255, 255, .028);
+    }
+
+    .about-lede {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink);
+    }
+
+    .about-copy p:not(.about-lede) {
+      margin: 22px 0 0;
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: color-mix(in srgb, var(--ink) 84%, transparent);
+    }
+
+    .edu-panel {
+      display: block;
+      padding: 22px 24px;
+      background:
+        linear-gradient(112deg, var(--glass-bright) 0%, var(--glass-mid) 34%, var(--glass-deep) 68%, rgba(244, 247, 255, .13) 100%),
+        var(--translucent-gray);
+      -webkit-backdrop-filter: blur(8px) saturate(118%);
+      backdrop-filter: blur(8px) saturate(118%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .26),
+        inset 3px 3px 0 color-mix(in srgb, var(--glass-edge) 88%, transparent),
+        inset 6px 6px 10px rgba(255, 255, 255, .06),
+        inset -3px -3px 0 var(--glass-depth),
+        inset -9px -9px 14px rgba(0, 0, 8, .5),
+        inset 0 0 32px rgba(255, 255, 255, .028);
+    }
+
+    .edu-company {
+      display: block;
+      font-family: var(--display);
+      font-size: 34px;
+      line-height: .9;
+      letter-spacing: -.01em;
+      color: color-mix(in srgb, var(--ink) 82%, transparent);
+      text-shadow:
+        -3px -3px 0 var(--etch-dark),
+        -2px -2px 0 var(--etch-dark),
+        -1px -1px 0 color-mix(in srgb, var(--etch-dark) 84%, transparent),
+        1px 1px 0 var(--etch-light),
+        2px 2px 0 color-mix(in srgb, var(--etch-light) 76%, transparent),
+        0 0 2px color-mix(in srgb, var(--accent) 64%, transparent);
+    }
+
+    .edu-meta {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 14px;
+      font-size: 11px;
+      color: var(--ink);
+    }
+
+    .edu-meta b { font-weight: 500; }
+
+    .edu-meta > span {
+      flex: 0 0 auto;
+      color: var(--accent);
+    }
+
+    .edu-description {
+      display: block;
+      margin-top: 8px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    @media (max-width: 800px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-photo {
+        max-width: 330px;
+      }
+
+      .about-photo svg,
+      .about-photo img {
+        height: auto;
+        aspect-ratio: 4 / 5;
+      }
     }
   
